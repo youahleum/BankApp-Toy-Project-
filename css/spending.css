@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+
+/* 공통 */
+body {
+  background-color: royalblue;
+}
+
+/* main */
+main {
+  background-color: #fff;
+}
+
+/* header */
+header {
+  width: 332px;
+  height: 69px;
+  position: relative;
+}
+header .close_btn {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+header h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  letter-spacing: -0.24px;
+}
+
+/* article */
+article {
+  margin: 0 0 0 29px;
+}
+article section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+}
+/* 지출관리 */
+.standard_sum {
+  width: 308px;
+  height: 87px;
+  position: relative;
+  margin: 0 0 59px 0;
+}
+.standard_sum h3 {
+  margin: 0 0 28px 0;
+}
+.standard_sum .standard_sum_money {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: right;
+  color: #ff5f00;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.standard_sum .standard_sum_graph {
+  background: url(../image/기준\ 설정바.png);
+  width: 308px;
+  height: 28px;
+}
+
+/* 일간 리포트 */
+.day_report {
+  margin: 0 0 52px 0;
+  overflow: hidden;
+}
+.day_report h3 {
+  margin: 0 0 11px 0;
+}
+.day_report .day_report_graph {
+  width: 462px;
+  height: 198px;
+  background: url(../image/Barchart-vertical.png);
+  margin: 0 0 0 21px;
+}
+/* 6월 지출 패턴 */
+.june {
+}
+.june h3 {
+  margin: 0 0 18px 0;
+}
+.june .day_report_circle_graph {
+  width: 308px;
+  height: 172px;
+  background: url(../image/6월챠트.png) no-repeat;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  padding-top: 136px;
+  margin-bottom: 5px;
+}
+.june > div > div {
+  /* display: block;
+  width: 308px;
+  height: 238px; */
+}
+.june > div > ul > li {
+  /* display: flex; */
+  position: relative;
+}
+.june > div > ul > li img {
+  margin: 0 21px 0 0;
+}
+.june > div > ul > li > span {
+  display: flex;
+  /* posi */
+}
+.june > div > ul > li > span p:first-child {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.june > div > ul > li > span p:last-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/spending.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="./js/main.js"></script>
 
     <title>Document</title>
@@ -18,8 +19,9 @@
         src="./image/아이폰 상태바.png"
         alt="아이폰 상태바"
       />
+      <div class="empty"></div>
       <header>
-        <div class="close_btn">닫기</div>
+        <div class="close_btn"><a href="./index.html">닫기</a></div>
         <h2>지출 관리</h2>
       </header>
       <article>
@@ -36,41 +38,41 @@
           <h3>6월 지출 패턴</h3>
           <div class="day_report_circle_graph">1,736,500원</div>
           <div class="month_shop_pattern">
+            <div class="shop_pattern_oil shop_pattern_child">
+              <img src="./image/주유비.png" alt="주유비logo" />
               <div>
-                <img src="./image/주유비.png" alt="주유비logo" />
-                <div>
-                  <p class="">주유비</p>
-                  <p class="">56,000원</p>
-                </div>
+                <p class="">주유비</p>
+                <p class="">56,000원</p>
               </div>
+            </div>
+            <div class="shop_pattern_health shop_pattern_child">
+              <img src="./image/건강관리비.png" alt="건강관리비logo" />
               <div>
-                <img src="./image/건강관리비.png" alt="건강관리비logo" />
-                <div>
-                  <p class="">건강관리비</p>
-                  <p class="">80,000원</p>
-                </d>
+                <p class="">건강관리비</p>
+                <p class="">80,000원</p>
               </div>
+            </div>
+            <div class="shop_pattern_dining shop_pattern_child">
+              <img src="./image/외식비.png" alt="외식비logo" />
               <div>
-                <img src="./image/외식비.png" alt="외식비logo" />
-                <div>
-                  <p class="">외식비</p>
-                  <p class="">233,000원</p>
-                </div>
+                <p class="">외식비</p>
+                <p class="">233,000원</p>
               </div>
+            </div>
+            <div class="shop_pattern_mart shop_pattern_child">
+              <img src="./image/장보기.png" alt="장보기logo" />
               <div>
-                <img src="./image/장보기.png" alt="장보기logo" />
-                <div>
-                  <p class="">장보기</p>
-                  <p class="">390,000원</p>
-                </div>
+                <p class="">장보기</p>
+                <p class="">390,000원</p>
               </div>
+            </div>
+            <div class="shop_pattern_shop shop_pattern_child">
+              <img src="./image/상점.png" alt="상점logo" />
               <div>
-                <img src="./image/상점.png" alt="상점logo" />
-                <div>
-                  <p class="">상점</p>
-                  <p class="">46,000원</p>
-                </div>
+                <p class="">상점</p>
+                <p class="">46,000원</p>
               </div>
+            </div>
           </div>
         </section>
       </article>

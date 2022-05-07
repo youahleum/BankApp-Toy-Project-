@@ -294,7 +294,7 @@ header .icon .search_icon {
   margin-bottom: 7px;
   border-bottom: 1px solid #dcdcdc;
 }
-.account_history .recent > ul li > p:first-child {
+.account_history .recent > ul > li > p:first-child {
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -366,7 +366,18 @@ nav > div .etc {
   height: 27px;
   margin-right: 64px;
 }
-/* .slide2 . */
+.slide2 .account_history .save_list ul .save_list_1 {
+  width: 162px;
+  height: 47px;
+  margin-right: 13px;
+  background: url(../image/2-Component3.png) no-repeat;
+}
+.slide2 .account_history .save_list ul .save_list_2 {
+  width: 162px;
+  height: 47px;
+  margin-right: 13px;
+  background: url(../image/2-Component4.png) no-repeat;
+}
 
 /* slide3 */
 .slide3 .user_image {
@@ -379,4 +390,16 @@ nav > div .etc {
   /* width: 86px; */
   height: 27px;
   margin-right: 64px;
+}
+.slide3 .account_history .save_list ul .save_list_1 {
+  width: 162px;
+  height: 47px;
+  margin-right: 13px;
+  background: url(../image/3-Component3.png) no-repeat;
+}
+.slide3 .account_history .save_list ul .save_list_2 {
+  width: 162px;
+  height: 47px;
+  margin-right: 13px;
+  background: url(../image/3-Component4.png) no-repeat;
 }

@@ -107,11 +107,6 @@ async function recentCreateList() {
   });
 }
 recentCreateList();
+
+// swiper
 var swiper = new Swiper(".mySwiper", {});
-// function recentCreateList() {
-//   // for (i = o; i < obj.length; i++) {
-//   //   if (new Date() === obj[i].date) {
-//   //   }
-//   //   elDiv.classList.add("recent");
-//   // }
-// }

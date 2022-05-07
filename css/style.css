@@ -308,8 +308,7 @@ header .icon .search_icon {
   letter-spacing: 0px;
   float: right;
 }
-.account_history .recent .recent_list li > p:last-child.income_in {
-}
+
 /* nav */
 nav {
   width: 375px;
@@ -352,4 +351,32 @@ nav > div .etc {
   height: 28px;
   margin: 0 0 0 0;
   background: url(../image/dot.png);
+}
+
+/* slide2 */
+
+.slide2 .user_image {
+  background: url(../image/아바타2.png);
+  width: 43px;
+  height: 43px;
+  margin-right: 64px;
+}
+.slide2 header .index_h3 {
+  /* width: 86px; */
+  height: 27px;
+  margin-right: 64px;
+}
+/* .slide2 . */
+
+/* slide3 */
+.slide3 .user_image {
+  background: url(../image/아바타3.png);
+  width: 43px;
+  height: 43px;
+  margin-right: 64px;
+}
+.slide3 header .index_h3 {
+  /* width: 86px; */
+  height: 27px;
+  margin-right: 64px;
 }

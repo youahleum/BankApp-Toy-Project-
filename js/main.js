@@ -107,6 +107,7 @@ async function recentCreateList() {
   });
 }
 recentCreateList();
+var swiper = new Swiper(".mySwiper", {});
 // function recentCreateList() {
 //   // for (i = o; i < obj.length; i++) {
 //   //   if (new Date() === obj[i].date) {

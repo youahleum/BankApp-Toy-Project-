@@ -16,6 +16,9 @@ main {
   /* scroll */
   -ms-overflow-style: none;
 }
+main .top-bar {
+  background-color: rgba(255, 255, 255, 1);
+}
 main::-webkit-scrollbar {
   display: none;
 }

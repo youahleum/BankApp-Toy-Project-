@@ -80,8 +80,7 @@ async function recentCreateList() {
       let history = i.history;
       let price = i.price;
       let incomePrice;
-
-      priceSum += price;
+      i.income === "out" ? (priceSum += price) : priceSum;
       let commaPrice = price
         .toString()
         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -90,6 +89,7 @@ async function recentCreateList() {
         : (incomePrice = `<p style="color: #FF5F00;">+${commaPrice}</p>`);
       recentListEl = recentListEl + `<li><p>${history}</p>${incomePrice}</li>`;
     }
+
     let commaPriceSum = priceSum
       .toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -114,15 +114,3 @@ recentCreateList();
 //   //   elDiv.classList.add("recent");
 //   // }
 // }
-
-{
-  /* <div class="recent_box">
-  <div class="recent">
-    <div class="recent_date">
-      <p>오늘</p>
-      <p>127,600원 지출</p>
-    
-        <p>미스터피자</p>
-        <p>32,000</p>
-      ; */
-}

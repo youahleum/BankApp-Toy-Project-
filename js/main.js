@@ -1,20 +1,18 @@
 // 날짜추출
-let today = new Date();
-let year = today.getFullYear();
-let month = ("0" + (today.getMonth() + 1)).slice(-2);
-let day = ("0" + today.getDate()).slice(-2);
-let dateString = year + "-" + month + "-" + day;
-
-let numComma = toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+const today = moment().format("YYYY-MM-DD");
+const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD");
+const twoDaysAgo = moment().subtract(2, "days").format("YYYY-MM-DD");
+console.log(today, yesterday, twoDaysAgo);
 
 const LiElem = document.querySelector(".recent_list li");
 const recentBox = document.getElementsByClassName("recent_box")[0];
+const accountHistory = document.querySelector(".account_history");
 console.log(recentBox);
 // create Element
-const elDiv = document.createElement("div");
-const elLi = document.createElement("li");
-const elUl = document.createElement("ul");
-const elP = document.createElement("p");
+// const elDiv = document.createElement("div");
+// const elLi = document.createElement("li");
+// const elUl = document.createElement("ul");
+// const elP = document.createElement("p");
 
 // // recent box에 recent div 넣는 변수 작성
 // let recent = elDiv.classList.add("recent");
@@ -38,10 +36,10 @@ async function recentCreateList() {
   const obj = await axios.get(
     "https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json"
   );
-  let today = obj.data.filter((x) => {
-    return x.date == dateString;
-  });
-  console.log(today);
+  // let today = obj.data.filter((x) => {
+  //   return x.date == dateString;
+  // });
+  // console.log(today);
   // recentBox.appendChild(recent);
   // recent.appendChild(recentDate);
   // for (i = 0; i < obj.data.length; i++) {
@@ -69,10 +67,20 @@ async function recentCreateList() {
   const groups = Object.keys(groupValues).map((key) => {
     return { date: key, value: groupValues[key] };
   });
-  console.log(groups);
-
-  groups.reverse().map((day) => {
+  // console.log(groups);
+  const groupsArr = groups.filter((day) => {
+    return day.date <= today;
+  });
+  // console.log(groupsArr);
+  groupsArr.reverse().map((day) => {
     let dateEl = day.date;
+    if (dateEl === today) {
+      dateEl = "오늘";
+    } else if (dateEl === yesterday) {
+      dateEl = "어제";
+    } else if (dateEl === twoDaysAgo) {
+      dateEl = "2일전";
+    }
     let priceSum = 0;
     let recentListEl = ``;
     for (i of day.value) {
@@ -80,12 +88,12 @@ async function recentCreateList() {
       let history = i.history;
       let price = i.price;
       let incomePrice;
-      i.income === "out" ? (priceSum += price) : priceSum;
+      // i.income === "out" ? (priceSum += price) : priceSum;
       let commaPrice = price
         .toString()
         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
       i.income === "out"
-        ? (incomePrice = `<p>${commaPrice}</p>`)
+        ? ((incomePrice = `<p>${commaPrice}</p>`), (priceSum += price))
         : (incomePrice = `<p style="color: #FF5F00;">+${commaPrice}</p>`);
       recentListEl = recentListEl + `<li><p>${history}</p>${incomePrice}</li>`;
     }
@@ -110,3 +118,11 @@ recentCreateList();
 
 // swiper
 var swiper = new Swiper(".mySwiper", {});
+
+function accountHistoryheightChange() {
+  accountHistory.classList.toggle("clickEvent");
+  // accountHistory.style.transition = "top 1s ";
+  // accountHistory.style.transition = "all 1s ";
+  //   accountHistory.style.height = "637px";
+  //   accountHistory.style.top = "-254px";
+}

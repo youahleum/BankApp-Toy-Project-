@@ -57,6 +57,12 @@ async function recentCreateList() {
   //     // let
   //   }
   // }
+  // classify 종류별 총합 변수 선언
+  let eatoutSum = 0;
+  let martSum = 0;
+  let healthSum = 0;
+  let shoppingSum = 0;
+  let oilingSum = 0;
 
   const groupValues = obj.data.reduce((acc, current) => {
     acc[current.date] = acc[current.date] || [];
@@ -67,11 +73,13 @@ async function recentCreateList() {
   const groups = Object.keys(groupValues).map((key) => {
     return { date: key, value: groupValues[key] };
   });
-  // console.log(groups);
+  // 오늘 날짜 이전만 나오게 filter
   const groupsArr = groups.filter((day) => {
     return day.date <= today;
   });
-  // console.log(groupsArr);
+  console.log(groupsArr);
+
+  // 오늘, 어제, 2일전일 경우 dateEl에 입력하기
   groupsArr.reverse().map((day) => {
     let dateEl = day.date;
     if (dateEl === today) {
@@ -83,10 +91,13 @@ async function recentCreateList() {
     }
     let priceSum = 0;
     let recentListEl = ``;
+
     for (i of day.value) {
       // console.log(i.classify);
       let history = i.history;
       let price = i.price;
+      const classify = i.classify;
+      // console.log(classify);
       let incomePrice;
       // i.income === "out" ? (priceSum += price) : priceSum;
       let commaPrice = price
@@ -96,6 +107,18 @@ async function recentCreateList() {
         ? ((incomePrice = `<p>${commaPrice}</p>`), (priceSum += price))
         : (incomePrice = `<p style="color: #FF5F00;">+${commaPrice}</p>`);
       recentListEl = recentListEl + `<li><p>${history}</p>${incomePrice}</li>`;
+      // classify 총합 구하기
+      if (classify === "eatout") {
+        eatoutSum += price;
+      } else if (classify === "mart") {
+        martSum += price;
+      } else if (classify === "health") {
+        healthSum += price;
+      } else if (classify === "shopping") {
+        shoppingSum += price;
+      } else if (classify === "oiling") {
+        oilingSum += price;
+      }
     }
 
     let commaPriceSum = priceSum
@@ -112,6 +135,7 @@ async function recentCreateList() {
       "text/html"
     ).body.firstElementChild;
     recentBox.appendChild(recentEl);
+    console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
   });
 }
 recentCreateList();
@@ -126,3 +150,4 @@ function accountHistoryheightChange() {
   //   accountHistory.style.height = "637px";
   //   accountHistory.style.top = "-254px";
 }
+console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);

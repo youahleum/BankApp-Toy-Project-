@@ -44,18 +44,12 @@ main {
   padding-bottom: 4px;
   z-index: 1;
 }
+
+/* 공통 */
 .empty {
   width: 375px;
   height: 44px;
 }
-/* .top-bar::after {
-  content: "";
-  display: block;
-  background-color: red;
-  width: 100%;
-  height: 5px;
-} */
-/* 공통 */
 
 /* header */
 header {
@@ -102,8 +96,7 @@ header .icon .search_icon {
   background: url(../image/Vector.png);
   cursor: pointer;
 }
-.account_status {
-}
+
 .account_status .account_info {
   width: 279px;
   height: 155px;
@@ -362,55 +355,4 @@ nav > div .etc {
   height: 28px;
   margin: 0 0 0 0;
   background: url(../image/dot.png);
-}
-
-/* slide2 */
-
-.slide2 .user_image {
-  background: url(../image/아바타2.png);
-  width: 43px;
-  height: 43px;
-  margin-right: 64px;
-}
-.slide2 header .index_h3 {
-  /* width: 86px; */
-  height: 27px;
-  margin-right: 64px;
-}
-.slide2 .account_history .save_list ul .save_list_1 {
-  width: 162px;
-  height: 47px;
-  margin-right: 13px;
-  background: url(../image/2-Component3.png) no-repeat;
-}
-.slide2 .account_history .save_list ul .save_list_2 {
-  width: 162px;
-  height: 47px;
-  margin-right: 13px;
-  background: url(../image/2-Component4.png) no-repeat;
-}
-
-/* slide3 */
-.slide3 .user_image {
-  background: url(../image/아바타3.png);
-  width: 43px;
-  height: 43px;
-  margin-right: 64px;
-}
-.slide3 header .index_h3 {
-  /* width: 86px; */
-  height: 27px;
-  margin-right: 64px;
-}
-.slide3 .account_history .save_list ul .save_list_1 {
-  width: 162px;
-  height: 47px;
-  margin-right: 13px;
-  background: url(../image/3-Component3.png) no-repeat;
-}
-.slide3 .account_history .save_list ul .save_list_2 {
-  width: 162px;
-  height: 47px;
-  margin-right: 13px;
-  background: url(../image/3-Component4.png) no-repeat;
 }

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+
+/* main */
+main {
+  background-color: #fff;
+  height: 812px;
+}
+/* scroll */
+
+main .top-bar {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* header */
+header {
+  width: 332px;
+  height: 69px;
+  position: relative;
+  margin-bottom: 33px;
+}
+header .close_btn {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* header .close_btn a{
+  width: ;
+} */
+header h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  letter-spacing: -0.24px;
+}
+
+/* write btn */
+.write-btn {
+  width: 317px;
+  height: 47px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 47px;
+  text-align: center;
+  border: 1px solid #858585;
+  border-radius: 4px;
+  margin: 0 0 44px 29px;
+  /* vertical-align: middle; */
+}
+
+/* transfer 1 */
+/*account list */
+.account_list .account_list_inner {
+  width: 317px;
+  height: 54px;
+  display: flex;
+  margin: 0 auto 17px;
+}
+.account_list .account_list_inner img:first-child {
+  width: 54px;
+  height: 54px;
+  margin-right: 17px;
+}
+.account_list .account_list_inner div {
+  width: 222px;
+}
+.account_list .account_list_inner div .account_user_name {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+.account_list .account_list_inner div .account_number {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.account_list .account_list_inner img:last-child {
+  width: 24px;
+  height: 24px;
+  margin-top: 14px;
+}
+
+/* transfer 2 */

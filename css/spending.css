@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
 
 /* 공통 */
-body {
+/* body {
   background-color: #333;
-}
+} */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -105,7 +105,11 @@ article section h3 {
 .june h3 {
   margin: 0 0 18px 0;
 }
-.june .day_report_circle_graph {
+.june #myChart.day_report_circle_graph {
+  width: 308px;
+  height: 172px;
+}
+/* .june .day_report_circle_graph {
   width: 308px;
   height: 172px;
   background: url(../image/6월챠트.png) no-repeat;
@@ -115,7 +119,7 @@ article section h3 {
   line-height: 36px;
   padding-top: 136px;
   margin-bottom: 10px;
-}
+} */
 .june .month_shop_pattern {
   margin-bottom: 90px;
 }

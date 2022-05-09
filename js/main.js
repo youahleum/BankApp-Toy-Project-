@@ -130,6 +130,11 @@ recentCreateList();
 // swiper
 var swiper = new Swiper(".mySwiper", {});
 
+// var swiper = new Swiper(".save_list", {
+//   sliderPerview: 3,
+//   freeMode: true,
+// });
+
 function accountHistoryheightChange() {
   accountHistory.classList.toggle("clickEvent");
   // accountHistory.style.transition = "top 1s ";

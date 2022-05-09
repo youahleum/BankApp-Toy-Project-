@@ -88,17 +88,29 @@ article section h3 {
 
 /* 일간 리포트 */
 .day_report {
+  /* width: 325px; */
   margin: 0 0 52px 0;
-  overflow: hidden;
 }
 .day_report h3 {
   margin: 0 0 11px 0;
 }
-.day_report .day_report_graph {
+.day_report_innerbox {
+  width: 400px;
+  height: 231px;
+  overflow-x: scroll;
+}
+/* */
+
+.day_report #myChart.day_report_graph {
   width: 462px;
-  height: 198px;
+  height: 231px;
+  overflow-x: scroll;
   /* background: url(../image/Barchart-vertical.png); */
   margin: 0 0 0 21px;
+  /* -ms-overflow-style: none; */
+}
+.day_report #myChart.day_report_graph::-webkit-scrollbar {
+  /* display: none; */
 }
 /* 6월 지출 패턴 */
 

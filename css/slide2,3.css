@@ -11,13 +11,13 @@
   height: 27px;
   margin-right: 64px;
 }
-.slide2 .account_history .save_list ul .save_list_1 {
+.slide2 .account_history .save_list div .save_list_1 {
   width: 162px;
   height: 47px;
   margin-right: 13px;
   background: url(../image/2-Component3.png) no-repeat;
 }
-.slide2 .account_history .save_list ul .save_list_2 {
+.slide2 .account_history .save_list div .save_list_2 {
   width: 162px;
   height: 47px;
   margin-right: 13px;
@@ -36,13 +36,13 @@
   height: 27px;
   margin-right: 64px;
 }
-.slide3 .account_history .save_list ul .save_list_1 {
+.slide3 .account_history .save_list div .save_list_1 {
   width: 162px;
   height: 47px;
   margin-right: 13px;
   background: url(../image/3-Component3.png) no-repeat;
 }
-.slide3 .account_history .save_list ul .save_list_2 {
+.slide3 .account_history .save_list div .save_list_2 {
   width: 162px;
   height: 47px;
   margin-right: 13px;

@@ -162,6 +162,7 @@ async function recentCreateList() {
       ],
     },
     options: {
+      responsive: false,
       scales: {
         y: {
           beginAtZero: true,

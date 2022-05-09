@@ -109,9 +109,7 @@ article section h3 {
   margin: 0 0 0 21px;
   /* -ms-overflow-style: none; */
 }
-.day_report #myChart.day_report_graph::-webkit-scrollbar {
-  /* display: none; */
-}
+
 /* 6월 지출 패턴 */
 
 .month {

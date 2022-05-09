@@ -40,6 +40,15 @@ header h2 {
 }
 
 /* write btn */
+.article1 {
+  display: block;
+}
+.article2 {
+  display: none;
+}
+.article3 {
+  display: none;
+}
 .write-btn {
   width: 317px;
   height: 47px;

@@ -87,44 +87,48 @@ async function recentCreateList() {
   healthDiv.appendChild(makeHealthP);
   oilDiv.appendChild(makeOilP);
   eatoutDiv.appendChild(makeEatoutP);
+
+  // 차트 라이브러리
+  const ctx = document
+    .querySelector("#myChart.day_report_circle_graph")
+    .getContext("2d");
+  const myChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["외식비", "장보기", "건강관리비", "장보기", "주유비"],
+      datasets: [
+        {
+          label: "한달 지출 패턴",
+          data: [eatoutSum, martSum, healthSum, shoppingSum, oilingSum],
+          // data: [10, 20, 30, 40, 50],
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+          ],
+          // borderColor: [
+          //   "rgba(255, 99, 132, 1)",
+          //   "rgba(54, 162, 235, 1)",
+          //   "rgba(255, 206, 86, 1)",
+          //   "rgba(75, 192, 192, 1)",
+          //   "rgba(153, 102, 255, 1)",
+          // ],
+          hoverOffset: 4,
+        },
+      ],
+    },
+    // options: {
+    //   scales: {
+    //     y: {
+    //       beginAtZero: true,
+    //     },
+    //   },
+    // },
+  });
 }
 recentCreateList();
-
+console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
+console.log(typeof eatoutSum);
 // chart 라이브러리
-const ctx = document
-  .querySelector("#myChart.day_report_circle_graph")
-  .getContext("2d");
-const myChart = new Chart(ctx, {
-  type: "doughnut",
-  data: {
-    labels: ["외식비", "장보기", "건강관리비", "장보기", "주유비"],
-    datasets: [
-      {
-        label: "한달 지출 패턴",
-        data: [eatoutSum, martSum, healthSum, shoppingSum, oilingSum],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-        ],
-        // borderColor: [
-        //   "rgba(255, 99, 132, 1)",
-        //   "rgba(54, 162, 235, 1)",
-        //   "rgba(255, 206, 86, 1)",
-        //   "rgba(75, 192, 192, 1)",
-        //   "rgba(153, 102, 255, 1)",
-        // ],
-        hoverOffset: 4,
-      },
-    ],
-  },
-  // options: {
-  //   scales: {
-  //     y: {
-  //       beginAtZero: true,
-  //     },
-  //   },
-  // },
-});

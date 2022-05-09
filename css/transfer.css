@@ -50,7 +50,12 @@ header h2 {
   border: 1px solid #858585;
   border-radius: 4px;
   margin: 0 0 44px 29px;
-  /* vertical-align: middle; */
+  cursor: pointer;
+}
+.write-btn:hover {
+  color: #fff;
+  background-color: #858585;
+  transition: 0.3s;
 }
 
 /* transfer 1 */
@@ -85,4 +90,100 @@ header h2 {
   margin-top: 14px;
 }
 
-/* transfer 2 */
+/* transfer 2 . html */
+.account_transfer_box .account_transfer_amount {
+  width: 316px;
+  height: 53px;
+  border-bottom: 3px solid #ff5f00;
+  margin: 0 0 29px 29px;
+}
+.account_transfer_amount > div {
+  display: flex;
+  width: 316px;
+}
+.account_transfer_amount .numInput {
+  display: inline-block;
+  width: 256px;
+  height: 53px;
+  border: none;
+  font-size: 36px;
+  font-weight: 500;
+  /* background-color: #858585; */
+  margin: 0 14px 0 0;
+  text-align: right;
+}
+.account_transfer_box .account_transfer_amount p {
+  width: 23px;
+  height: 36px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 11px 0 6px 0;
+}
+.account_transfer_box > p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: center;
+  margin: 0 0 49px 0;
+}
+.account_transfer_num_box {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.account_transfer_num_box div {
+  cursor: pointer;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero {
+  width: 22px;
+  height: 53px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  color: #858585;
+  flex-basis: 30%;
+  margin-bottom: 24px;
+}
+.twozero {
+  width: 43px;
+  height: 53px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  color: #858585;
+  flex-basis: 30%;
+}
+
+.num_del {
+  background: url(../image/이체-back.png) no-repeat;
+  width: 43px;
+  height: 53px;
+  flex-basis: 30%;
+  background-position: center center;
+}
+.next {
+  width: 377px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  background-color: #ff5f00;
+  margin-top: -10px;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/transfer.css" />
-
+    <script defer src="../js/transfer.js"></script>
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 
     <!-- <script defer src="../js/main.js"></script> -->
@@ -25,7 +25,7 @@
         <div class="close_btn"><a href="../index.html">취소</a></div>
         <h2>이체</h2>
       </header>
-      <article>
+      <article class="article2">
         <section class="account_list">
           <div class="account_list_inner">
             <img src="../image/이체-Ellipse6.png" alt="" />
@@ -36,8 +36,54 @@
           </div>
         </section>
         <section class="account_transfer_box">
-          <div class="account_transfer_amount"></div>
-          <div class="account_transfer_num_box"></div>
+          <div class="account_transfer_amount">
+            <!-- <label for=""> -->
+            <div class="">
+              <div class="numInput" disabled></div>
+              <p>원</p>
+            </div>
+            <!-- </label> -->
+          </div>
+          <p>생활비 계좌 : 1,752,900 에서</p>
+          <div class="account_transfer_num_box">
+            <div class="one" onclick="numAdd('1')">1</div>
+            <div class="two" onclick="numAdd('2')">2</div>
+            <div class="three" onclick="numAdd('3')">3</div>
+            <div class="four" onclick="numAdd('4')">4</div>
+            <div class="five" onclick="numAdd('5')">5</div>
+            <div class="six" onclick="numAdd('6')">6</div>
+            <div class="seven" onclick="numAdd('7')">7</div>
+            <div class="eight" onclick="numAdd('8')">8</div>
+            <div class="nine" onclick="numAdd('9')">9</div>
+            <div class="zero" onclick="numAdd('0')">0</div>
+            <div class="twozero" onclick="numAdd('00')">00</div>
+            <div class="num_del" onclick="del()"></div>
+          </div>
+          <div class="next" onclick="next()">다음</div>
+        </section>
+      </article>
+      <article class="article3">
+        <section class="account_list">
+          <div class="account_list_inner">
+            <img src="../image/이체-Ellipse6.png" alt="" />
+            <div>
+              <div class="account_user_name">정을수</div>
+              <div class="account_number">신한 112048393002</div>
+            </div>
+          </div>
+        </section>
+        <section class="account_transfer_box">
+          <div class="account_transfer_amount">
+            <!-- <label for=""> -->
+            <div class="">
+              <div class="numInput" disabled></div>
+              <p>원</p>
+            </div>
+            <!-- </label> -->
+          </div>
+          <p>생활비 계좌 : 1,752,900 에서</p>
+
+          <div class="next">다음</div>
         </section>
       </article>
       <nav>

@@ -120,7 +120,7 @@ async function recentCreateList() {
         oilingSum += price;
       }
     }
-
+    console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
     let commaPriceSum = priceSum
       .toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -135,7 +135,6 @@ async function recentCreateList() {
       "text/html"
     ).body.firstElementChild;
     recentBox.appendChild(recentEl);
-    console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
   });
 }
 recentCreateList();
@@ -150,4 +149,3 @@ function accountHistoryheightChange() {
   //   accountHistory.style.height = "637px";
   //   accountHistory.style.top = "-254px";
 }
-console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);

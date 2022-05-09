@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/spending.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/spending.css" />
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script defer src="./js/main.js"></script> -->
-    <script defer src="./js/chart.js"></script>
+    <!-- <script defer src="../js/main.js"></script> -->
+    <script defer src="../js/chart.js"></script>
     <title>Document</title>
   </head>
   <body>
     <main>
       <img
         class="top-bar"
-        src="./image/아이폰 상태바.jpg"
+        src="../image/아이폰 상태바.jpg"
         alt="아이폰 상태바"
       />
       <div class="empty"></div>
@@ -34,44 +34,45 @@
         </section>
         <section class="day_report">
           <h3>일간 리포트</h3>
-          <!-- <canvas id="myChart" class="day_report_graph"></canvas> -->
-          <div class="day_report_graph"></div>
+          <canvas id="myChart" class="day_report_graph"></canvas>
+          <!-- <div class="day_report_graph"></div> -->
         </section>
-        <section class="june">
-          <h3>6월 지출 패턴</h3>
-          <canvas id="myChart" class="day_report_circle_graph"></canvas>
-          <div class="day_report_circle_graph">1,736,500원</div>
+        <section class="month">
+          <h3>5월 지출 패턴</h3>
+          <canvas id="myChart" class="month_report_circle_graph"></canvas>
+          <!-- 사용 총금액 -->
+          <div class="month_report_circle_graph_sum"></div>
           <div class="month_shop_pattern">
             <div class="shop_pattern_oil shop_pattern_child">
-              <img src="./image/주유비.png" alt="주유비logo" />
+              <img src="../image/주유비.png" alt="주유비logo" />
               <div>
                 <p class="">주유비</p>
                 <!-- <p class="">56,000원</p> -->
               </div>
             </div>
             <div class="shop_pattern_health shop_pattern_child">
-              <img src="./image/건강관리비.png" alt="건강관리비logo" />
+              <img src="../image/건강관리비.png" alt="건강관리비logo" />
               <div>
                 <p class="">건강관리비</p>
                 <!-- <p class="">80,000원</p> -->
               </div>
             </div>
             <div class="shop_pattern_dining shop_pattern_child">
-              <img src="./image/외식비.png" alt="외식비logo" />
+              <img src="../image/외식비.png" alt="외식비logo" />
               <div>
                 <p class="">외식비</p>
                 <!-- <p class="">233,000원</p> -->
               </div>
             </div>
             <div class="shop_pattern_mart shop_pattern_child">
-              <img src="./image/장보기.png" alt="장보기logo" />
+              <img src="../image/장보기.png" alt="장보기logo" />
               <div>
                 <p class="">장보기</p>
                 <!-- <p class="">390,000원</p> -->
               </div>
             </div>
             <div class="shop_pattern_shop shop_pattern_child">
-              <img src="./image/상점.png" alt="상점logo" />
+              <img src="../image/상점.png" alt="상점logo" />
               <div>
                 <p class="">상점</p>
                 <!-- <p class="">46,000원</p> -->

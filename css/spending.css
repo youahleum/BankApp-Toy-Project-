@@ -102,14 +102,27 @@ article section h3 {
 }
 /* 6월 지출 패턴 */
 
-.june h3 {
+.month {
+  position: relative;
+}
+.month h3 {
   margin: 0 0 18px 0;
 }
-.june #myChart.day_report_circle_graph {
+.month #myChart.month_report_circle_graph {
   width: 308px;
   height: 172px;
 }
-/* .june .day_report_circle_graph {
+.month .month_report_circle_graph_sum {
+  width: 133px;
+  position: absolute;
+  top: 222px;
+  left: 50%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-left: -66px;
+}
+/* .month .month_report_circle_graph {
   width: 308px;
   height: 172px;
   background: url(../image/6월챠트.png) no-repeat;
@@ -120,29 +133,29 @@ article section h3 {
   padding-top: 136px;
   margin-bottom: 10px;
 } */
-.june .month_shop_pattern {
+.month .month_shop_pattern {
   margin-bottom: 90px;
 }
-.june .month_shop_pattern .shop_pattern_child {
+.month .month_shop_pattern .shop_pattern_child {
   position: relative;
   margin-bottom: 11px;
 }
-.june .month_shop_pattern .shop_pattern_child img {
+.month .month_shop_pattern .shop_pattern_child img {
   margin: 3px 0 0 0;
 }
-.june .month_shop_pattern .shop_pattern_child > div {
+.month .month_shop_pattern .shop_pattern_child > div {
   display: flex;
   width: 259px;
   position: absolute;
   top: 0;
   left: 49px;
 }
-.june .month_shop_pattern .shop_pattern_child p:first-child {
+.month .month_shop_pattern .shop_pattern_child p:first-child {
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
 }
-.june .month_shop_pattern .shop_pattern_child p:last-child {
+.month .month_shop_pattern .shop_pattern_child p:last-child {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;

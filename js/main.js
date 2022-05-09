@@ -58,11 +58,11 @@ async function recentCreateList() {
   //   }
   // }
   // classify 종류별 총합 변수 선언
-  let eatoutSum = 0;
-  let martSum = 0;
-  let healthSum = 0;
-  let shoppingSum = 0;
-  let oilingSum = 0;
+  // let eatoutSum = 0;
+  // let martSum = 0;
+  // let healthSum = 0;
+  // let shoppingSum = 0;
+  // let oilingSum = 0;
 
   const groupValues = obj.data.reduce((acc, current) => {
     acc[current.date] = acc[current.date] || [];
@@ -107,20 +107,8 @@ async function recentCreateList() {
         ? ((incomePrice = `<p>${commaPrice}</p>`), (priceSum += price))
         : (incomePrice = `<p style="color: #FF5F00;">+${commaPrice}</p>`);
       recentListEl = recentListEl + `<li><p>${history}</p>${incomePrice}</li>`;
-      // classify 총합 구하기
-      if (classify === "eatout") {
-        eatoutSum += price;
-      } else if (classify === "mart") {
-        martSum += price;
-      } else if (classify === "health") {
-        healthSum += price;
-      } else if (classify === "shopping") {
-        shoppingSum += price;
-      } else if (classify === "oiling") {
-        oilingSum += price;
-      }
     }
-    console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
+
     let commaPriceSum = priceSum
       .toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");

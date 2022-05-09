@@ -13,7 +13,7 @@ const monthReportCircleGraph = document.querySelector(
   ".month_report_circle_graph_sum"
 );
 const monthReportBarGraph = document.querySelector(".day_report_graph");
-
+let daySumArr = [];
 // classify 종류별 총합 변수 선언
 let eatoutSum = 0;
 let martSum = 0;
@@ -40,16 +40,15 @@ async function recentCreateList() {
     return day.date <= today;
   });
 
-  groupsArr.reverse().map((day) => {
+  groupsArr.map((day) => {
+    let priceSum = 0;
     for (i of day.value) {
       let price = i.price;
       const classify = i.classify;
+
       // console.log(classify);
       let incomePrice;
-      // i.income === "out" ? (priceSum += price) : priceSum;
-      let commaPrice = price
-        .toString()
-        .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+      i.income === "out" ? (priceSum += price) : priceSum;
       // classify 총합 구하기
       if (classify === "eatout") {
         eatoutSum += price;
@@ -63,6 +62,8 @@ async function recentCreateList() {
         oilingSum += price;
       }
     }
+    daySumArr.push(priceSum);
+    console.log(daySumArr);
   });
   console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
   let totalSum = (eatoutSum + martSum + healthSum + shoppingSum + oilingSum)
@@ -98,45 +99,76 @@ async function recentCreateList() {
 
   // chart 라이브러리
   // 일간 바 그래프
-  // const ctxBar = document
-  //   .querySelector("#myChart.day_report_graph")
-  //   .getContext("2d");
-  // const myChartBar = new Chart(ctx, {
-  //   type: "bar",
-  //   data: {
-  //     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-  //     datasets: [
-  //       {
-  //         label: "# of Votes",
-  //         data: [12, 19, 3, 5, 2, 3],
-  //         backgroundColor: [
-  //           "rgba(255, 99, 132, 0.2)",
-  //           "rgba(54, 162, 235, 0.2)",
-  //           "rgba(255, 206, 86, 0.2)",
-  //           "rgba(75, 192, 192, 0.2)",
-  //           "rgba(153, 102, 255, 0.2)",
-  //           "rgba(255, 159, 64, 0.2)",
-  //         ],
-  //         borderColor: [
-  //           "rgba(255, 99, 132, 1)",
-  //           "rgba(54, 162, 235, 1)",
-  //           "rgba(255, 206, 86, 1)",
-  //           "rgba(75, 192, 192, 1)",
-  //           "rgba(153, 102, 255, 1)",
-  //           "rgba(255, 159, 64, 1)",
-  //         ],
-  //         borderWidth: 1,
-  //       },
-  //     ],
-  //   },
-  //   options: {
-  //     scales: {
-  //       y: {
-  //         beginAtZero: true,
-  //       },
-  //     },
-  //   },
-  // });
+  const ctxBar = document
+    .querySelector("#myChart.day_report_graph")
+    .getContext("2d");
+  const myChartBar = new Chart(ctxBar, {
+    type: "bar",
+    data: {
+      labels: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+      ],
+      datasets: [
+        {
+          label: "일간 지출금액",
+          data: [...daySumArr],
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.5)",
+            "rgba(255, 206, 86, 0.5)",
+            "rgba(75, 192, 192, 0.5)",
+            "rgba(153, 102, 255, 0.5)",
+            "rgba(255, 159, 64, 0.5)",
+          ],
+          borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
   // 월간 원형 그래프
   const ctx = document
     .querySelector("#myChart.month_report_circle_graph")

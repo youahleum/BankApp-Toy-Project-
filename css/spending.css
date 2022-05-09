@@ -97,7 +97,7 @@ article section h3 {
 .day_report .day_report_graph {
   width: 462px;
   height: 198px;
-  background: url(../image/Barchart-vertical.png);
+  /* background: url(../image/Barchart-vertical.png); */
   margin: 0 0 0 21px;
 }
 /* 6월 지출 패턴 */
@@ -109,9 +109,11 @@ article section h3 {
   margin: 0 0 18px 0;
 }
 .month #myChart.month_report_circle_graph {
-  width: 308px;
-  height: 172px;
+  width: 500px;
+  height: 198px;
+  /* overflow-x: scroll; */
 }
+
 .month .month_report_circle_graph_sum {
   width: 133px;
   position: absolute;

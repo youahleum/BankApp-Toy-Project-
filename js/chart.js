@@ -199,3 +199,11 @@ async function recentCreateList() {
   });
 }
 recentCreateList();
+
+function inputValue() {
+  let rangeValue = document
+    .querySelector("input.account_graph1")
+    .value.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("rangeValue").innerHTML = `${rangeValue}원`;
+}

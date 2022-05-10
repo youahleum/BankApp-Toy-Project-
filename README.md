@@ -12,14 +12,14 @@
      console.log(obj[1].date);
      recentCreateList(obj);
      });
-1. async await
+1. async await - 이 방식으로 적용
 
    - async function recentCreateList() {
      const obj = await axios.get(
      "https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json"
      );
 
-1. 옛날방식
+1. 옛날에 많이 사용하였지만 현재는 많이 사용하지 않는 방식
    - const 요청url = "https://eulsoo.github.io/list.json";  
      const 요청객체 = new XMLHttpRequest();
      요청객체.open("GET", 요청url);  

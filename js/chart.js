@@ -63,7 +63,7 @@ async function recentCreateList() {
       }
     }
     daySumArr.push(priceSum);
-    console.log(daySumArr);
+    // console.log(daySumArr);
   });
   console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
   let totalSum = (eatoutSum + martSum + healthSum + shoppingSum + oilingSum)

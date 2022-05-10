@@ -215,20 +215,25 @@ header .icon .search_icon {
   display: none;
 }
 
-.account_history .save_list .save_list_innerBox {
+/* .account_history .save_list .save_list_innerBox {
   width: 500px;
   overflow-x: scroll;
-}
+} */
 
-.save_list img:first-child,
-.save_list img:nth-child(2) {
+.save_list > img {
   display: inline-block;
   width: 162px;
   height: 47px;
   margin: 0 16px 0 0;
 }
+.account_history .save_list .save_list_btn {
+  display: flex;
+  width: 120px;
+  height: 47px;
+}
 
 .account_history .save_list .save_list_plusbtn {
+  display: inline-block;
   width: 24px;
   height: 24px;
   margin: 11px 6px 0 3px;
@@ -236,7 +241,7 @@ header .icon .search_icon {
 }
 
 .account_history .save_list .save_list_plustxt {
-  /* display: block; */
+  display: inline-block;
   width: 68px;
   height: 12px;
   margin: 17px 0 0 0;

@@ -2,12 +2,12 @@
 const today = moment().format("YYYY-MM-DD");
 const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD");
 const twoDaysAgo = moment().subtract(2, "days").format("YYYY-MM-DD");
-console.log(today, yesterday, twoDaysAgo);
+// console.log(today, yesterday, twoDaysAgo);
 
 const LiElem = document.querySelector(".recent_list li");
 const recentBox = document.getElementsByClassName("recent_box")[0];
 const accountHistory = document.querySelector(".account_history");
-console.log(recentBox);
+// console.log(recentBox);
 
 async function recentCreateList() {
   const obj = await axios.get(
@@ -27,7 +27,7 @@ async function recentCreateList() {
   const groupsArr = groups.filter((day) => {
     return day.date <= today;
   });
-  console.log(groupsArr);
+  // console.log(groupsArr);
 
   // 오늘, 어제, 2일전일 경우 dateEl에 입력하기
   groupsArr.reverse().map((day) => {
@@ -82,4 +82,13 @@ var swiper = new Swiper(".mySwiper", {});
 
 function accountHistoryheightChange() {
   accountHistory.classList.toggle("clickEvent");
+}
+
+const saveListBtn = document.querySelector(".save_list_btn");
+// let accountImg = `<img src="../image/Component 4.png" alt="" />`;
+function addAccount() {
+  saveListBtn.insertAdjacentHTML(
+    "beforebegin",
+    `<img src="../image/Component 4.png" alt="" />`
+  );
 }

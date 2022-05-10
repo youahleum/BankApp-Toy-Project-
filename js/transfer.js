@@ -38,7 +38,7 @@ function del() {
   // console.log(a);
   numStr = numStr.slice(0, a);
   numInput.innerText = numStr;
-  console.log(numStr);
+  // console.log(numStr);
   if (numStr === "") {
     nextBtn.style.display = "none";
   }

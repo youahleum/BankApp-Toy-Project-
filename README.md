@@ -32,6 +32,10 @@
 
 ## Swiper 라이브러리 활용
 
+    - 슬라이드처럼 넘어갈 수 있게 설정
+
+![슬라이드1](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index.jpg?token=GHSAT0AAAAAABTSKQMAOWIOGWJZGBN4AZKQYT2KF2A)![슬라이드2](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index3.jpg?token=GHSAT0AAAAAABTSKQMBCU3GTCB24U557XQEYT2KIBA)![슬라이드3](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index4.jpg?token=GHSAT0AAAAAABTSKQMBBMDPHRRJJ37RL4M4YT2KIOA)
+
 ---
 
 ## chart js 라이브러리 활용
@@ -51,3 +55,5 @@
 ---
 
 ## click Event를 이용하여 탭 올리기
+
+![탭올리기전](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index.jpg?token=GHSAT0AAAAAABTSKQMAOWIOGWJZGBN4AZKQYT2KF2A) ![탭올린후](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index2.jpg?token=GHSAT0AAAAAABTSKQMBDPDYLK4KF3IHDX6YYT2KG6Q)

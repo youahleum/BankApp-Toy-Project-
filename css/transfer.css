@@ -42,12 +42,14 @@ header h2 {
 /* write btn */
 .article1 {
   display: block;
+  /* display: none; */
 }
 .article2 {
   display: none;
 }
 .article3 {
   display: none;
+  /* display: block; */
 }
 .write-btn {
   width: 317px;
@@ -195,4 +197,21 @@ header h2 {
   background-color: #ff5f00;
   margin-top: -10px;
   cursor: pointer;
+}
+
+/* article 3  이체완료 페이지 */
+
+.article3 .article3_sec {
+  width: 377px;
+  height: 631px;
+}
+.article3 .article3_sec .article3_box {
+}
+.article3 .article3_sec .article3_box {
+  width: 314px;
+  height: 430px;
+  /* line-height: 631px; */
+  margin: 201px 0 0 63px;
+  font-size: 36px;
+  font-weight: 300;
 }

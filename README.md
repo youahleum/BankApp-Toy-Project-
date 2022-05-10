@@ -56,4 +56,6 @@
 
 ## click Event를 이용하여 탭 올리기
 
+- 클릭 이벤트를 주고 탭 길이를 높이고 위치를 위로 올려 리스트들이 더 많이 보일 수 있게 진행
+
 ![탭올리기전](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index.jpg?token=GHSAT0AAAAAABTSKQMAOWIOGWJZGBN4AZKQYT2KF2A) ![탭올린후](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index2.jpg?token=GHSAT0AAAAAABTSKQMBDPDYLK4KF3IHDX6YYT2KG6Q)

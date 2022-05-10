@@ -45,6 +45,7 @@ header h2 {
   /* display: none; */
 }
 .article2 {
+  /* display: block; */
   display: none;
 }
 .article3 {
@@ -148,6 +149,10 @@ header h2 {
 .account_transfer_num_box div {
   cursor: pointer;
 }
+.account_transfer_num_box div:hover {
+  /* text-shadow: 2px 2px 2px black; */
+  /* font-size: 40px; */
+}
 .one,
 .two,
 .three,
@@ -187,6 +192,7 @@ header h2 {
   background-position: center center;
 }
 .next {
+  display: none;
   width: 377px;
   height: 48px;
   text-align: center;

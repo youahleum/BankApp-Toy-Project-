@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/transfer.css" />
-
+    <script defer src="../js/transfer.js"></script>
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 
     <!-- <script defer src="../js/main.js"></script> -->
-
     <title>toyProject 이체</title>
   </head>
   <body>
@@ -26,63 +24,126 @@
         <div class="close_btn"><a href="./index.html">취소</a></div>
         <h2>이체</h2>
       </header>
-      <article>
+      <article class="article1">
         <div class="write-btn">직접입력</div>
         <section class="account_list">
-          <a href=""
-            ><div class="account_list_inner">
-              <img src="../image/이체-Ellipse6.png" alt="" />
-              <div>
-                <div class="account_user_name">정을수</div>
-                <div class="account_number">신한 112048393002</div>
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse6.png','정을수','신한 112048393002')"
+          >
+            <img src="../image/이체-Ellipse6.png" alt="" />
+            <div>
+              <div class="account_user_name">정을수</div>
+              <div class="account_number">신한 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse1.png','신이현','국민 112048393002')"
+          >
+            <img src="../image/이체-Ellipse1.png" alt="" />
+            <div>
+              <div class="account_user_name">신이현</div>
+              <div class="account_number">국민 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse2.png','웅진코웨이','국민 112048393002')"
+          >
+            <img src="../image/이체-Ellipse2.png" alt="" />
+            <div>
+              <div class="account_user_name">웅진코웨이</div>
+              <div class="account_number">국민 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse3.png','기강 슈퍼','하나 112048393002')"
+          >
+            <img src="../image/이체-Ellipse3.png" alt="" />
+            <div>
+              <div class="account_user_name">기강 슈퍼</div>
+              <div class="account_number">하나 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse4.png','김민석','하나 112048393002')"
+          >
+            <img src="../image/이체-Ellipse4.png" alt="" />
+            <div>
+              <div class="account_user_name">김민석</div>
+              <div class="account_number">하나 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+
+          <div
+            class="account_list_inner"
+            onclick="next1('../image/이체-Ellipse5.png','기성훈','하나 112048393002')"
+          >
+            <img src="../image/이체-Ellipse5.png" alt="" />
+            <div>
+              <div class="account_user_name">기성훈</div>
+              <div class="account_number">하나 112048393002</div>
+            </div>
+            <img src="../image/이체-star.png" alt="" />
+          </div>
+        </section>
+      </article>
+      <article class="article2">
+        <section class="account_list">
+          <div class="account_list_inner">
+            <img class="accountImg" src="" alt="" />
+            <div>
+              <div class="article2_account_user_name"><!-- 정을수 --></div>
+              <div class="article2_account_number">
+                <!-- 신한 112048393002-->
               </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
-          <a href=""
-            ><div class="account_list_inner">
-              <img src="../image/이체-Ellipse1.png" alt="" />
-              <div>
-                <div class="account_user_name">신이현</div>
-                <div class="account_number">국민 112048393002</div>
-              </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
-          <a href=""
-            ><div class="account_list_inner">
-              <img src="../image/이체-Ellipse2.png" alt="" />
-              <div>
-                <div class="account_user_name">웅진코웨이</div>
-                <div class="account_number">국민 112048393002</div>
-              </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
-          <a href=""
-            ><div class="account_list_inner">
-              <img src="../image/이체-Ellipse3.png" alt="" />
-              <div>
-                <div class="account_user_name">기강 슈퍼</div>
-                <div class="account_number">하나 112048393002</div>
-              </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
-          <a href="">
-            <div class="account_list_inner">
-              <img src="../image/이체-Ellipse4.png" alt="" />
-              <div>
-                <div class="account_user_name">김민석</div>
-                <div class="account_number">하나 112048393002</div>
-              </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
-          <a href=""
-            ><div class="account_list_inner">
-              <img src="../image/이체-Ellipse5.png" alt="" />
-              <div>
-                <div class="account_user_name">기성훈</div>
-                <div class="account_number">하나 112048393002</div>
-              </div>
-              <img src="../image/이체-star.png" alt="" /></div
-          ></a>
+            </div>
+          </div>
+        </section>
+        <section class="account_transfer_box">
+          <div class="account_transfer_amount">
+            <div class="">
+              <div class="numInput"></div>
+              <p>원</p>
+            </div>
+          </div>
+          <p>생활비 계좌 : 1,752,900 에서</p>
+          <div class="account_transfer_num_box">
+            <div class="one" onclick="numAdd('1')">1</div>
+            <div class="two" onclick="numAdd('2')">2</div>
+            <div class="three" onclick="numAdd('3')">3</div>
+            <div class="four" onclick="numAdd('4')">4</div>
+            <div class="five" onclick="numAdd('5')">5</div>
+            <div class="six" onclick="numAdd('6')">6</div>
+            <div class="seven" onclick="numAdd('7')">7</div>
+            <div class="eight" onclick="numAdd('8')">8</div>
+            <div class="nine" onclick="numAdd('9')">9</div>
+            <div class="zero" onclick="numAdd('0')">0</div>
+            <div class="twozero" onclick="numAdd('00')">00</div>
+            <div class="num_del" onclick="del()"></div>
+          </div>
+          <div class="next" onclick="next2()">다음</div>
+        </section>
+      </article>
+      <article class="article3">
+        <section class="article3_sec">
+          <div class="article3_box">
+            <span class="art3_name"></span>님께 <br />
+            <span class="art3_amount"></span>원이<br />
+            이체되었습니다.
+          </div>
         </section>
       </article>
       <nav>

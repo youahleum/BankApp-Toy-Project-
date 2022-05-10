@@ -196,5 +196,3 @@ async function recentCreateList() {
   });
 }
 recentCreateList();
-// console.log(eatoutSum, martSum, healthSum, shoppingSum, oilingSum);
-// console.log(typeof eatoutSum);

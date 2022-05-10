@@ -103,6 +103,16 @@ header h2 {
 }
 
 /* transfer 2 . html */
+.article2_account_user_name {
+  font-size: 18px;
+  font-weight: 300;
+
+  /* margin-top: ; */
+}
+.article2_account_number {
+  font-size: 16px;
+  font-weight: 300;
+}
 .account_transfer_box .account_transfer_amount {
   width: 316px;
   height: 53px;

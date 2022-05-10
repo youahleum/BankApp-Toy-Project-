@@ -189,11 +189,13 @@ async function recentCreateList() {
             "rgba(75, 192, 192, 0.4)",
             "rgba(153, 102, 255, 0.4)",
           ],
-          // hoverOffset: 4,
+          hoverOffset: 4,
         },
       ],
     },
-    cutoutPercentage: 80,
+    // options: {
+    //   cutoutPercentage: 80,
+    // },
   });
 }
 recentCreateList();

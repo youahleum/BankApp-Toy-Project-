@@ -145,6 +145,7 @@ header .icon .search_icon {
   height: 21px;
   /* background: url(../image/Group\ 37.png) no-repeat; */
   margin: 3px 7px 0 0;
+  accent-color: #ffdb4c;
 }
 .account_status .account_info .account_graph_group .account_graph2 {
   width: 14px;

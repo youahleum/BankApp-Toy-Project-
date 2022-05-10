@@ -150,8 +150,8 @@ header h2 {
   cursor: pointer;
 }
 .account_transfer_num_box div:hover {
-  /* text-shadow: 2px 2px 2px black; */
-  /* font-size: 40px; */
+  text-shadow: 2px 2px 2px black;
+  font-size: 40px;
 }
 .one,
 .two,

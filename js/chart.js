@@ -183,16 +183,17 @@ async function recentCreateList() {
           label: "한달 지출 패턴",
           data: [eatoutSum, martSum, healthSum, shoppingSum, oilingSum],
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 99, 132, 0.4)",
+            "rgba(54, 162, 235, 0.4)",
+            "rgba(255, 206, 86, 0.4)",
+            "rgba(75, 192, 192, 0.4)",
+            "rgba(153, 102, 255, 0.4)",
           ],
-          hoverOffset: 4,
+          // hoverOffset: 4,
         },
       ],
     },
+    cutoutPercentage: 80,
   });
 }
 recentCreateList();

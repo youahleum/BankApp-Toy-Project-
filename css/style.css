@@ -143,7 +143,7 @@ header .icon .search_icon {
 .account_status .account_info .account_graph_group .account_graph1 {
   width: 202px;
   height: 21px;
-  background: url(../image/Group\ 37.png) no-repeat;
+  /* background: url(../image/Group\ 37.png) no-repeat; */
   margin: 3px 7px 0 0;
 }
 .account_status .account_info .account_graph_group .account_graph2 {

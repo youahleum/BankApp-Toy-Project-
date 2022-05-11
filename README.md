@@ -2,6 +2,8 @@
 
 ## json 파일을 이용한 데이터 연결
 
+### json 연결하는 방법
+
 1. fetch().then()
    ````fetch("https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json")
     .then((res) => {
@@ -13,7 +15,11 @@
     recentCreateList(obj);
     });```
    ````
-1. async await - 이 방식으로 적용
+1. axios / async await - 이 방식으로 적용
+
+   - axios : Fetch와 Axios의 차이점은 Axios는 요청과 응답을 모두 JSON 형식으로 자동 변환시켜 줍니다.
+   - async await: Promise 객체를 사용하더라도 .then() .catch() 등등 뒤에 붙이는 것들이 많아진다.
+     뒤에 뭐 안 붙이고, 더 간단하게 비동기 작업을 동기적으로 만들어주는 키워드가 바로 await 이다.
 
    ````async function recentCreateList() {
      const obj = await axios.get(
@@ -33,6 +39,7 @@
      할일(obj);
      };```
    ````
+   ***
 
 ## Swiper 라이브러리 활용
 
@@ -60,6 +67,6 @@
 
 ## click Event를 이용하여 탭 올리기
 
-- 클릭 이벤트를 주고 탭 길이를 높이고 위치를 위로 올려 리스트들이 더 많이 보일 수 있게 진행
+- 클릭 이벤트를 주고 탭 길이의 height를 높이고 position을 이용해 top을 위치를 변경, 리스트들이 더 많이 보일 수 있게 진행
 
 ![탭올리기전](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index.jpg?token=GHSAT0AAAAAABTSKQMAOWIOGWJZGBN4AZKQYT2KF2A) ![탭올린후](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index2.jpg?token=GHSAT0AAAAAABTSKQMBDPDYLK4KF3IHDX6YYT2KG6Q)

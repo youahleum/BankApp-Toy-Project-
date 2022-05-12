@@ -5,7 +5,8 @@
 ### json 연결하는 방법
 
 1. fetch().then()
-   ````fetch("https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json")
+   ```
+   fetch("https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json")
     .then((res) => {
     return res.json();
     })
@@ -13,23 +14,25 @@
     console.log(obj);
     console.log(obj[1].date);
     recentCreateList(obj);
-    });```
-   ````
+    });
+   ```
 1. axios / async await - 이 방식으로 적용
 
    - axios : Fetch와 Axios의 차이점은 Axios는 요청과 응답을 모두 JSON 형식으로 자동 변환시켜 줍니다.
    - async await: Promise 객체를 사용하더라도 .then() .catch() 등등 뒤에 붙이는 것들이 많아진다.
      뒤에 뭐 안 붙이고, 더 간단하게 비동기 작업을 동기적으로 만들어주는 키워드가 바로 await 이다.
 
-   ````async function recentCreateList() {
+   ```
+   async function recentCreateList() {
      const obj = await axios.get(
      "https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json"
-     );```
+     );
 
-   ````
+   ```
 
 1. 옛날에 많이 사용하였지만 현재는 많이 사용하지 않는 방식
-   ````const 요청url = "https://eulsoo.github.io/list.json";
+   ```
+   const 요청url = "https://eulsoo.github.io/list.json";
      const 요청객체 = new XMLHttpRequest();
      요청객체.open("GET", 요청url);
      요청객체.responseType = "json";
@@ -37,8 +40,8 @@
      요청객체.onload = () => {
      const obj = 요청객체.response;
      할일(obj);
-     };```
-   ````
+     };
+   ```
    ***
 
 ## Swiper 라이브러리 활용

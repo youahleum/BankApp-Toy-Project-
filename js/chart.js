@@ -1,7 +1,7 @@
-let todayt = new Date();
-let year = todayt.getFullYear();
-let month = ("0" + (todayt.getMonth() + 1)).slice(-2);
-let day = ("0" + todayt.getDate()).slice(-2);
+let now = new Date();
+let year = now.getFullYear();
+let month = ("0" + (now.getMonth() + 1)).slice(-2);
+let day = ("0" + now.getDate()).slice(-2);
 let today = year + "-" + month + "-" + day;
 
 const shopDiv = document.querySelector(".shop_pattern_shop>div");
@@ -49,7 +49,7 @@ async function recentCreateList() {
       // console.log(classify);
       let incomePrice;
       i.income === "out" ? (priceSum += price) : priceSum;
-      // classify 총합 구하기
+      // classify별로  총합 구하기
       if (classify === "eatout") {
         eatoutSum += price;
       } else if (classify === "mart") {

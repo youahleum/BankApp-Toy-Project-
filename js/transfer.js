@@ -3,23 +3,22 @@ const article2 = document.querySelector(".article2");
 const article3 = document.querySelector(".article3");
 const numInput = document.querySelector(".numInput");
 const closeBtn = document.querySelector(".close_btn a");
-// const art3accountName = document.querySelector(".article2_account_user_name");
-// const art3accountNum = document.querySelector(".article2_account_user_name");
 
 // article2
-// let accountImgSrc = document.querySelector(".accountImg").src;
 let accountImg = document.querySelector(".accountImg");
-// console.log(accountImgSrc);
 const accountName = document.querySelector(".article2_account_user_name");
 const accountNum = document.querySelector(".article2_account_number");
 const nextBtn = document.querySelector(".next");
 
+// article2-5
+const accountNumDiv = document.querySelector(".account_numInput");
+const accountNextBtn = document.querySelector(".account-next");
+
 // article3
 const transferName = document.querySelector(".art3_name");
 const transferAmount = document.querySelector(".art3_amount");
-// const nameValue = document.querySelector("account_user_name").innerHTML;
-// console.log(nameValue);
 
+// article2
 let numStr = "";
 function numAdd(n) {
   numStr = numStr + n;
@@ -64,4 +63,31 @@ function next2() {
   }
 }
 
-function getName() {}
+// article 2-5
+let accountNumStr = "";
+function accountNumAdd(n) {
+  accountNumStr = accountNumStr + n;
+  console.log(numStr);
+  accountNumStr.startsWith("0")
+    ? (accountNumStr = accountNumStr.slice(1))
+    : null;
+  accountNumStr.startsWith("0")
+    ? (accountNumStr = accountNumStr.slice(1))
+    : null;
+  accountNumDiv.innerText = accountNumStr;
+  console.log(accountNumStr);
+  if (accountNumStr !== "") {
+    accountNextBtn.style.display = "block";
+  }
+}
+
+function accountNumDel() {
+  let a = accountNumStr.length - 1;
+  // console.log(a);
+  accountNumStr = accountNumStr.slice(0, a);
+  accountNumDiv.innerText = accountNumStr;
+  // console.log(accountNumStr);
+  if (accountNumStr === "") {
+    accountNextBtn.style.display = "none";
+  }
+}

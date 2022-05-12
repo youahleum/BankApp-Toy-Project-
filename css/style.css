@@ -231,6 +231,7 @@ header .icon .search_icon {
   display: flex;
   width: 120px;
   height: 47px;
+  cursor: pointer;
 }
 
 .account_history .save_list .save_list_plusbtn {

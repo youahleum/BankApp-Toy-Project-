@@ -4,16 +4,29 @@ const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD");
 const twoDaysAgo = moment().subtract(2, "days").format("YYYY-MM-DD");
 // console.log(today, yesterday, twoDaysAgo);
 
+// element 불러오기
 const LiElem = document.querySelector(".recent_list li");
 const recentBox = document.getElementsByClassName("recent_box")[0];
 const accountHistory = document.querySelector(".account_history");
-// console.log(recentBox);
 
+// fetch 이용
+// // fetch("https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json")
+// //   .then((res) => {
+// //     return res.json();
+// //   })
+// //   .then((obj) => {
+// //     console.log(obj);
+// //     console.log(obj[1].date);
+// //     recentCreateList(obj);
+// //   });
+
+//axios로 구현
 async function recentCreateList() {
   const obj = await axios.get(
     "https://raw.githubusercontent.com/jusunjo/bank-json/main/bank.json"
   );
-
+  // 날짜별로 배열에 넣어주기
+  // reduce 로 새로운 객체 만들기
   const groupValues = obj.data.reduce((acc, current) => {
     acc[current.date] = acc[current.date] || [];
     acc[current.date].push(current);
@@ -23,11 +36,12 @@ async function recentCreateList() {
   const groups = Object.keys(groupValues).map((key) => {
     return { date: key, value: groupValues[key] };
   });
+  console.log(groups);
   // 오늘 날짜 이전만 나오게 filter
   const groupsArr = groups.filter((day) => {
     return day.date <= today;
   });
-  // console.log(groupsArr);
+  console.log(groupsArr);
 
   // 오늘, 어제, 2일전일 경우 dateEl에 입력하기
   groupsArr.reverse().map((day) => {
@@ -49,7 +63,6 @@ async function recentCreateList() {
       const classify = i.classify;
       // console.log(classify);
       let incomePrice;
-      // i.income === "out" ? (priceSum += price) : priceSum;
       let commaPrice = price
         .toString()
         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");

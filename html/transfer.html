@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/transfer.css" />
     <script defer src="../js/transfer.js"></script>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-
-    <!-- <script defer src="../js/main.js"></script> -->
     <title>toyProject 이체</title>
   </head>
   <body>
@@ -135,6 +132,48 @@
             <div class="num_del" onclick="del()"></div>
           </div>
           <div class="next" onclick="next2()">다음</div>
+        </section>
+      </article>
+      <article class="article2-5">
+        <section class="account_list">
+          <div class="account_list_inner">
+            <div>
+              <select name="bankList" class="bankList" size="1">
+                <option value="1" selected>은행선택</option>
+                <option value="1">국민은행</option>
+                <option value="2">신한은행</option>
+                <option value="3">농협</option>
+                <option value="4">기업은행</option>
+              </select>
+              <div class="article2_account_number">
+                <!-- 신한 112048393002-->
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="account_transfer_box">
+          <div class="account_transfer_amount">
+            <div class="">
+              <div class="account_numInput"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="account_transfer_num_box">
+            <div class="one" onclick="accountNumAdd('1')">1</div>
+            <div class="two" onclick="accountNumAdd('2')">2</div>
+            <div class="three" onclick="accountNumAdd('3')">3</div>
+            <div class="four" onclick="accountNumAdd('4')">4</div>
+            <div class="five" onclick="accountNumAdd('5')">5</div>
+            <div class="six" onclick="accountNumAdd('6')">6</div>
+            <div class="seven" onclick="accountNumAdd('7')">7</div>
+            <div class="eight" onclick="accountNumAdd('8')">8</div>
+            <div class="nine" onclick="accountNumAdd('9')">9</div>
+            <div class="zero" onclick="accountNumAdd('0')">0</div>
+            <div class="twozero" onclick="accountNumAdd('00')">00</div>
+            <div class="num_del" onclick="accountNumDel()"></div>
+          </div>
+          <div class="account-next" onclick="next2()">다음</div>
         </section>
       </article>
       <article class="article3">

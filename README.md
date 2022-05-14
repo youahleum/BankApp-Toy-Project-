@@ -73,3 +73,13 @@
 - 클릭 이벤트를 주고 탭 길이의 height를 높이고 position을 이용해 top을 위치를 변경, 리스트들이 더 많이 보일 수 있게 진행
 
 ![탭올리기전](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index.jpg?token=GHSAT0AAAAAABTSKQMAOWIOGWJZGBN4AZKQYT2KF2A) ![탭올린후](https://raw.githubusercontent.com/youahleum/Toy-Project/master/image/index2.jpg?token=GHSAT0AAAAAABTSKQMBDPDYLK4KF3IHDX6YYT2KG6Q)
+
+## moment 이용한 날짜 구하기
+
+```
+// 날짜추출
+const today = moment().format("YYYY-MM-DD");
+const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD");
+const twoDaysAgo = moment().subtract(2, "days").format("YYYY-MM-DD");
+
+```
